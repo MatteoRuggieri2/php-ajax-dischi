@@ -1,0 +1,28 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 65%;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: #2e3a46;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container {
+    width: 30px;
+    margin: 0 20px;
+}
