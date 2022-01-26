@@ -13,35 +13,35 @@
 
 </head>
 <body>
-
-    <!-- HEADER -->
-    <header>
-        <div class="logo-container">
-            <img src="img/spotify-logo.png" alt="Spotify Logo">
-        </div>
-    </header>
-
-    <!-- MAIN -->
-    <main>
-        <div class="container">
-            <div class="wrapper">
-
-                <!-- Single Album -->
-                <?php foreach($database as $album) { ?>
-                    <div class="single-album-container">
-                        <img class="album-image" src="<?php echo $album['poster'] ?>" alt="<?php echo $album['title'] ?>">
-                        <h2 class="album-title"><?php echo $album['title'] ?></h2>
-                        <h3 class="album-author"><?php echo $album['author'] ?></h3>
-                        <h3 class="album-year"><?php echo $album['year'] ?></h3>
-                    </div>
-                <?php } ?>
-
-            </div>
-        </div>
+    <div id="root">
         
+        <!-- HEADER -->
+        <header>
+            <div class="logo-container">
+                <img src="img/spotify-logo.png" alt="Spotify Logo">
+            </div>
+        </header>
 
-        <script type="text/javascript" src="js/script.js"></script>
-    </main>
+        <!-- MAIN -->
+        <main>
+            <div class="container">
+                <div class="wrapper">
+
+                    <!-- Single Album -->
+                    <div v-for="(album) in albumsArray" class="single-album-container">
+                        <img class="album-image" :src="album.poster" :alt="album.title">
+                        <h2 class="album-title">{{ album.title }}</h2>
+                        <h3 class="album-author">{{ album.author }}</h3>
+                        <h3 class="album-year">{{ album.year }}</h3>
+                    </div>
+
+                </div>
+            </div>
+            
+
+            <script type="text/javascript" src="js/script.js"></script>
+        </main>
+    </div>
 
 </body>
 </html>
