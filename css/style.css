@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* COMMON */
 .container {
     width: 65%;
     margin: auto;
@@ -15,6 +16,7 @@ img {
     height: auto;
 }
 
+/* HEADER */
 header {
     background-color: #2e3a46;
     height: 50px;
@@ -25,4 +27,54 @@ header {
 header .logo-container {
     width: 30px;
     margin: 0 20px;
+}
+
+/* MAIN */
+main {
+    background-color: #1e2d3b;
+    min-height: calc( 100vh - 50px );
+    padding: 50px 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.no-result-text {
+    display: inline-block;
+    margin: 40px 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+/* Single Card */
+.single-album-container {
+    width: calc( (100% / 5) - 40px );
+    margin: 0 20px 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #2e3a46;
+    cursor: pointer;
+}
+
+.single-album-container .album-image {
+    margin-bottom: 20px;
+}
+
+.single-album-container .album-title {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    /* font-size: 23px; */
+    font-size: 1.2vw;
+}
+
+.single-album-container .album-author {
+    color: gray;
+    /* font-size: 18px; */
+    font-size: 0.9vw;
+    font-weight: lighter;
 }
