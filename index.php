@@ -1,3 +1,5 @@
+<?php include __DIR__ . '/database.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,15 +20,20 @@
 
     <!-- MAIN -->
     <main>
+
+    <?php echo $database ?>
         <div class="container">
             <div class="wrapper">
 
                 <!-- Single Album -->
-                <div class="single-album-container">
-                    <img class="album-image" src="album.poster" alt="album.title">
-                    <h2 class="album-title">titolo</h2>
-                    <h3 class="album-author">autore</h3>
-                </div>
+                <?php foreach($database as $album) { ?>
+                    <div class="single-album-container">
+                        <img class="album-image" src="<?php echo $album['poster'] ?>" alt="<?php echo $album['title'] ?>">
+                        <h2 class="album-title"><?php echo $album['title'] ?></h2>
+                        <h3 class="album-author"><?php echo $album['author'] ?></h3>
+                        <h3 class="album-year"><?php echo $album['year'] ?></h3>
+                    </div>
+                <?php } ?>
 
             </div>
         </div>
