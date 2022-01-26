@@ -21,7 +21,6 @@
     <!-- MAIN -->
     <main>
 
-    <?php echo $database ?>
         <div class="container">
             <div class="wrapper">
 
@@ -37,6 +36,7 @@
 
             </div>
         </div>
+        
     </main>
 
 </body>
