@@ -33,23 +33,13 @@
                     <div class="genre-search">
 
                         <label for="genre-select">Filtra per genere</label>
-                        <select @onchange="callGenreApi" v-model="genreFilter" name="genre-select" id="genre-select">
+                        <select @change="getAlbumsApi" v-model="genreFilter" name="genre-select" id="genre-select">
                             <option value="">All</option>
                             <option v-for="(singleGenre) in genresArray" :value="singleGenre">{{ singleGenre }}</option>
                         </select>
 
                     </div>
 
-                    <!-- Author-search -->
-                    <!-- <div class="author-search">
-
-                        <label for="author-select">Filtra per autore</label>
-                        <select @change="$emit('selectedAuthorFilter', authorFilter)" v-model="authorFilter" name="author-select" id="author-select">
-                            <option value="">All</option>
-                            <option v-for="(element, index) in authors" :key="index" :value="element">{{ element }}</option>
-                        </select>
-
-                    </div> -->
                 </div>
 
                 <div class="wrapper">
