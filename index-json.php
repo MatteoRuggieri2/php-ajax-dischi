@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Cdn VueJs e Axios -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 
 </head>
@@ -54,11 +54,10 @@
 
                 </div>
             </div>
-            
-
-            <script type="text/javascript" src="js/script.js"></script>
         </main>
-    </div>
 
+    </div>
+    
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
